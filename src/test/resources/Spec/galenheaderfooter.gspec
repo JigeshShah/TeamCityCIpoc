@@ -1,0 +1,16 @@
+@objects
+	header	.deloitte
+	footer	.footer
+	
+= Header =
+	header : 
+		height ~50px
+		centered horizontally inside screen
+		
+	
+= Footer =
+	header : 
+		height ~50px
+		centered horizontally inside screen
+		aligned horizontally all header
+		

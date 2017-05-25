@@ -1,0 +1,8 @@
+browserName=
+device=Android
+deviceName=TA9330416L
+platformVersion=5.1
+platformName=Android
+appPackage=com.makemytrip
+appActivity=com.mmt.travel.app.home.ui.HomeActivity
+Uninstall=False

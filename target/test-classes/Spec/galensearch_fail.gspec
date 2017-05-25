@@ -1,0 +1,50 @@
+@objects
+	header					.deloitte
+		logo				img
+	searchsection			xpath .//*[@id='forms']
+		inputsearch-*		.input-sm.form-control
+		labelinput-*		label
+	resultssection			id forms
+		resultsheading		h3
+	resultstable			xpath .//*[@id='GROUP-search-result-table_wrapper']/div[2]/div/div/table
+		tableheading-*		th
+		tabledata-*			td
+		
+
+	
+= Header =
+	header : 
+		height ~50px
+		centered horizontally inside screen
+		
+	
+= Section-1 =
+	searchsection.inputsearch-1 : 
+		below header 200 to 250 px
+	
+= SearchSection =
+	searchsection : 
+		below header 30 to 50 px
+		
+	@for [1-3] as index
+	searchsection.inputsearch-${index}:
+		above searchsection.inputsearch-${index + 1} 100 to 500 px
+	
+	@for [1-3] as indexlbl
+	searchsection.labelinput-${indexlbl}:
+		above searchsection.labelinput-${indexlbl + 1} 10 to 50 px
+		
+= ResultsSection =			
+	resultssection :
+		aligned vertically all searchsection
+	
+	resultssection.resultsheading :
+		inside resultssection 100 to 120 px top left
+	
+	@for [1-2] as indexth
+	resultstable.tableheading-${indexth}:
+		left-of resultstable.tableheading-${indexth + 1} 0 to 10 px
+
+	@for [1-2] as indexth
+	resultstable.tabledata-${indexth}:
+		left-of resultstable.tabledata-${indexth + 1} 0 to 10 px
